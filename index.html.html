@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Ajanta Luhana | AI Software Engineer | AI/ML &amp; Generative AI</title>
 <meta name="description" content="Ajanta Luhana is an AI Software Engineer building LLM, RAG and AI agent applications. Oracle-certified in Generative AI, with experience at Pixis Software, Metavystic and Voguetech.">
-<meta name="theme-color" content="#020617">
+<meta name="theme-color" content="#04061a">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Ajanta Luhana | AI Software Engineer | AI/ML &amp; Generative AI">
 <meta property="og:description" content="AI Software Engineer building intelligent systems, AI-powered products and data-driven solutions.">
@@ -270,16 +270,19 @@ h1,h2,h3{font-family:var(--f-h);line-height:1.1;letter-spacing:-.01em}
 .proj__pic{object-position:center}
 @media(max-width:1000px){.proj__body{padding:1.2rem 1.6rem 1.8rem}}
 </style>
+<link rel="stylesheet" href="assets/css/theme.css">
+<link rel="stylesheet" href="assets/css/sections.css">
 </head>
-<body>
+<body class="pf">
 <a class="skip" href="#main">Skip to content</a>
+<div class="progress" id="progress" aria-hidden="true"></div>
 
 <header class="nav" id="nav">
   <div class="wrap nav__in">
     <a class="logo" href="#home" aria-label="Ajanta Luhana, home"><span class="logo__mark">AL</span><span class="logo__text">AJANTA LUHANA</span></a>
     <nav id="menu" class="nav__menu" aria-label="Main">
       <a href="#home">Home</a><a href="#about">About</a><a href="#skills">Skills</a>
-      <a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#credentials">Credentials</a><a href="#contact">Contact</a>
+      <a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#reviews">Reviews</a><a href="#credentials">Credentials</a><a href="#contact">Contact</a>
     </nav>
     <div class="nav__cta">
       <a class="icon-link" data-link="github" target="_blank" rel="noopener" aria-label="GitHub">GitHub</a>
@@ -302,6 +305,7 @@ h1,h2,h3{font-family:var(--f-h);line-height:1.1;letter-spacing:-.01em}
     <p class="hero__role reveal">AI SOFTWARE ENGINEER</p>
     <p class="hero__tag reveal">AI / ML • GENERATIVE AI • AUTOMATION</p>
     <p class="hero__value reveal" id="hero-value"></p>
+    <a class="hero__new reveal" href="#albion"><b>NEW</b>Watch the Albion HR AI-agent platform demo <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
     <div class="hero__btns reveal">
       <a class="btn" href="#projects">View Projects</a>
       <a class="btn btn--ghost" data-link="resume" download>Download Resume</a>
@@ -362,6 +366,7 @@ h1,h2,h3{font-family:var(--f-h);line-height:1.1;letter-spacing:-.01em}
   <div class="wrap">
     <p class="label reveal">04 — PROJECTS</p>
     <h2 id="proj-h" class="reveal">Featured projects</h2>
+    <div id="spotlight"></div>
     <div class="filters" id="filters" role="group" aria-label="Filter projects" hidden></div>
     <div class="grid grid--2" id="proj-grid"></div>
     <p class="note reveal" id="proj-note"></p>
@@ -395,10 +400,22 @@ h1,h2,h3{font-family:var(--f-h);line-height:1.1;letter-spacing:-.01em}
   </div>
 </section>
 
+<!-- REVIEWS -->
+<section class="sec" id="reviews" aria-labelledby="rv-h">
+  <div class="wrap">
+    <p class="label reveal">07 — REVIEWS</p>
+    <div class="rv-top reveal">
+      <h2 id="rv-h">What people say about working with me</h2>
+      <div class="rv-sum" id="rv-sum"></div>
+    </div>
+    <div id="reviews-app" class="reveal"></div>
+  </div>
+</section>
+
 <!-- METRICS -->
 <section class="sec" id="metrics" aria-labelledby="met-h">
   <div class="wrap">
-    <p class="label reveal">07 — AT A GLANCE</p>
+    <p class="label reveal">08 — AT A GLANCE</p>
     <h2 id="met-h" class="reveal">Achievements &amp; metrics</h2>
     <div class="stats" id="stats"></div>
   </div>
@@ -407,7 +424,7 @@ h1,h2,h3{font-family:var(--f-h);line-height:1.1;letter-spacing:-.01em}
 <!-- CREDENTIALS -->
 <section class="sec sec--alt" id="credentials" aria-labelledby="cred-h">
   <div class="wrap">
-    <p class="label reveal">08 — CERTIFICATIONS &amp; WORKSHOPS</p>
+    <p class="label reveal">09 — CERTIFICATIONS &amp; WORKSHOPS</p>
     <h2 id="cred-h" class="reveal">Credentials</h2>
     <div class="grid grid--3" id="cred-grid"></div>
     <h3 class="sub reveal">Workshops attended</h3>
@@ -418,7 +435,7 @@ h1,h2,h3{font-family:var(--f-h);line-height:1.1;letter-spacing:-.01em}
 <!-- AI LAB -->
 <section class="sec" id="lab" aria-labelledby="lab-h">
   <div class="wrap">
-    <p class="label reveal">09 — AI LAB</p>
+    <p class="label reveal">10 — AI LAB</p>
     <h2 id="lab-h" class="reveal">System status</h2>
     <div class="term reveal" id="term" role="img" aria-label="Decorative terminal showing an AI system initialising">
       <div class="term__bar"><i></i><i></i><i></i><span>ai-lab — visual only</span></div>
@@ -431,7 +448,7 @@ h1,h2,h3{font-family:var(--f-h);line-height:1.1;letter-spacing:-.01em}
 <!-- RESUME -->
 <section class="sec sec--alt" id="resume" aria-labelledby="res-h">
   <div class="wrap">
-    <p class="label reveal">10 — EXECUTIVE PROFILE</p>
+    <p class="label reveal">11 — EXECUTIVE PROFILE</p>
     <h2 id="res-h" class="reveal">Resume</h2>
     <div class="card card--wide reveal">
       <div>
@@ -449,7 +466,7 @@ h1,h2,h3{font-family:var(--f-h);line-height:1.1;letter-spacing:-.01em}
 <!-- CONTACT -->
 <section class="sec contact" id="contact" aria-labelledby="contact-h">
   <div class="wrap">
-    <p class="label reveal">11 — CONTACT</p>
+    <p class="label reveal">12 — CONTACT</p>
     <h2 id="contact-h" class="contact__h reveal">LET'S BUILD <span class="grad">SOMETHING INTELLIGENT.</span></h2>
     <p class="lead reveal">Open to conversations about AI engineering, LLM and agent applications, machine learning and software engineering opportunities.</p>
     <div class="hero__btns reveal">
@@ -677,7 +694,7 @@ window.PORTFOLIO = {
       lp.set([a.x, a.y, a.z, b.x, b.y, b.z], i * 6);
     });
     var lg = new T.BufferGeometry(); lg.setAttribute('position', new T.BufferAttribute(lp, 3));
-    group.add(new T.LineSegments(lg, new T.LineBasicMaterial({ color: 0x1f7bff, transparent: true, opacity: .28, blending: T.AdditiveBlending, depthWrite: false })));
+    group.add(new T.LineSegments(lg, new T.LineBasicMaterial({ color: 0x5b6cff, transparent: true, opacity: .3, blending: T.AdditiveBlending, depthWrite: false })));
 
     var np = new Float32Array(nodes.length * 3);
     nodes.forEach(function (n, i) { np.set([n.x, n.y, n.z], i * 3); });
@@ -695,7 +712,7 @@ window.PORTFOLIO = {
     var sn = small ? 14 : 30, sig = [], sp = new Float32Array(sn * 3);
     for (var s = 0; s < sn; s++) sig.push({ e: (Math.random() * edges.length) | 0, t: Math.random(), v: .004 + Math.random() * .008 });
     var sg = new T.BufferGeometry(); sg.setAttribute('position', new T.BufferAttribute(sp, 3));
-    group.add(new T.Points(sg, new T.PointsMaterial({ size: .38, map: sprite, color: 0x00f0ff, transparent: true, depthWrite: false, blending: T.AdditiveBlending })));
+    group.add(new T.Points(sg, new T.PointsMaterial({ size: .4, map: sprite, color: 0xff5db1, transparent: true, depthWrite: false, blending: T.AdditiveBlending })));
 
     function updateSignals() {
       sig.forEach(function (o, i) {
@@ -746,184 +763,7 @@ window.PORTFOLIO = {
 })();
 
 </script>
-<script>
-(function () {
-  var D = window.PORTFOLIO;
-  if (!D) return;
-  var $ = function (s, r) { return (r || document).querySelector(s); };
-  var esc = function (s) { return String(s).replace(/[&<>"']/g, function (c) { return ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]; }); };
-  var tags = function (a) { return a && a.length ? '<div class="tags">' + a.map(function (t) { return '<span class="tag">' + esc(t) + '</span>'; }).join('') + '</div>' : ''; };
-
-  /* links, copy */
-  document.querySelectorAll('[data-link]').forEach(function (a) { a.href = D.links[a.dataset.link] || '#'; });
-  var mail = 'mailto:' + D.email;
-  $('#mail').href = mail; $('#mail2').href = mail; $('#mail2').textContent = D.email;
-  $('#hero-value').textContent = D.value;
-  $('#year').textContent = new Date().getFullYear();
-  $('#about-text').innerHTML = D.about.map(function (p) { return '<p>' + esc(p) + '</p>'; }).join('');
-
-  /* avatar: show initials if photo is missing */
-  var av = $('#avatar'), img = av && $('img', av);
-  if (img) { img.addEventListener('error', function () { av.classList.add('nophoto'); }); if (img.complete && !img.naturalWidth) av.classList.add('nophoto'); }
-
-  function card(inner, cls) { return '<article class="card reveal ' + (cls || '') + '">' + inner + '</article>'; }
-
-  $('#leadership').innerHTML = D.leadership.map(function (l) {
-    return card('<p class="card__org">' + esc(l.org) + '</p><h3>' + esc(l.title) + '</h3><p>' + esc(l.text) + '</p>');
-  }).join('');
-
-  $('#cap-grid').innerHTML = D.capabilities.map(function (c) {
-    return card('<div class="ico">' + esc(c.icon) + '</div><h3>' + esc(c.title) + '</h3><p>' + esc(c.text) + '</p>' + tags(c.tags));
-  }).join('');
-
-  $('#skills-grid').innerHTML = D.skills.map(function (g) {
-    return card('<div class="skill-g"><h3>' + esc(g.group) + '</h3>' + tags(g.items) + '</div>');
-  }).join('');
-
-  /* projects */
-  var droneSvg = '<svg viewBox="0 0 200 140" fill="none" stroke="#7fd8ff" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><circle cx="40" cy="30" r="20"/><circle cx="160" cy="30" r="20"/><circle cx="40" cy="110" r="20"/><circle cx="160" cy="110" r="20"/><path d="M55 44L85 66M145 44L115 66M55 96L85 74M145 96L115 74"/><rect x="82" y="58" width="36" height="24" rx="6" fill="rgba(0,140,255,.25)"/></svg>';
-  var cats = ['All'];
-  D.projects.forEach(function (p) { if (cats.indexOf(p.category) < 0) cats.push(p.category); });
-  var grid = $('#proj-grid'), filt = $('#filters'), cur = 'All';
-  function renderProjects() {
-    var list = D.projects.filter(function (p) { return cur === 'All' || p.category === cur; });
-    grid.innerHTML = list.map(function (p) {
-      var links = (p.links || []).map(function (l) { return '<a class="lnk" href="' + esc(l.url) + '" target="_blank" rel="noopener">' + esc(l.label) + ' →</a>'; }).join('');
-      var demo = p.video ? '<div class="proj__demo" role="button" tabindex="0" aria-label="' + esc(p.video.label) + ' (click to pause or play)"><video muted loop playsinline preload="none" disablepictureinpicture poster="' + esc(p.video.poster) + '"><source src="' + esc(p.video.src) + '" type="video/mp4"></video><span class="proj__dtag">DEMO</span></div>' : '';
-      var body = (p.badge ? '<span class="badge">' + esc(p.badge) + '</span>' : '') + (p.period ? '<p class="card__org">' + esc(p.period) + ' · ' + esc(p.category) + '</p>' : '') + '<h3>' + esc(p.title) + '</h3>' + demo + '<p>' + esc(p.description) + '</p>' + (p.meta ? '<p class="meta">' + esc(p.meta) + '</p>' : '') + tags(p.technologies) + '<div>' + links + '</div>';
-      var ar = p.image && p.image.ar ? p.image.ar : 1.7778;
-      var img = p.image ? '<img class="PCLS" src="' + esc(p.image.src) + '" alt="' + esc(p.image.alt) + '" width="1600" height="' + Math.round(1600 / ar) + '" loading="lazy" decoding="async" referrerpolicy="no-referrer"' + (p.image.pos ? ' style="object-position:' + esc(p.image.pos) + '"' : '') + ' onerror="this.' + (p.featured ? 'remove()' : 'parentNode.remove()') + '">' : '';
-      var gal = (p.featured && p.gallery) ? '<div class="proj__gal">' + p.gallery.map(function (g) { return '<a class="proj__g" href="#" role="button" style="--ar:' + (g.ar || 1.3333) + '" aria-label="Enlarge: ' + esc(g.caption) + '"><img src="' + esc(g.src) + '" alt="' + esc(g.alt) + '" width="400" height="' + Math.round(400 / (g.ar || 1.3333)) + '" loading="lazy" decoding="async"><span>' + esc(g.caption) + '</span></a>'; }).join('') + '</div>' : '';
-      return p.featured
-        ? '<article class="card proj--feat reveal in"><div class="proj__viz"><div class="proj__main" style="aspect-ratio:' + ar + '">' + droneSvg + img.replace('PCLS', 'proj__img') + '</div>' + gal + '</div><div class="proj__body">' + body + '</div></article>'
-        : card((img ? '<figure class="proj__shot" style="aspect-ratio:' + ar + '">' + img.replace('PCLS', 'proj__pic') + '</figure>' : '') + body, 'in');
-    }).join('');
-    initTilt();
-    initDemos();
-  }
-  var demoIO = null;
-  function initDemos() {
-    var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (demoIO) demoIO.disconnect();
-    demoIO = 'IntersectionObserver' in window ? new IntersectionObserver(function (es) {
-      es.forEach(function (en) {
-        var v = en.target.querySelector('video');
-        if (en.isIntersecting && !en.target.dataset.paused && !reduce) { var r = v.play(); if (r && r.catch) r.catch(function () {}); } else v.pause();
-      });
-    }, { threshold: 0.5 }) : null;
-    grid.querySelectorAll('.proj__demo').forEach(function (d) {
-      if (demoIO) demoIO.observe(d);
-      function tog() { var v = d.querySelector('video'); if (v.paused) { delete d.dataset.paused; v.play().catch(function () {}); } else { d.dataset.paused = '1'; v.pause(); } }
-      d.addEventListener('click', tog);
-      d.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); tog(); } });
-    });
-  }
-  if (D.projects.length >= 3 && cats.length > 2) {
-    filt.hidden = false;
-    filt.innerHTML = cats.map(function (c) { return '<button type="button" class="' + (c === cur ? 'on' : '') + '" data-c="' + esc(c) + '">' + esc(c) + '</button>'; }).join('');
-    filt.addEventListener('click', function (e) {
-      var b = e.target.closest('button'); if (!b) return; cur = b.dataset.c;
-      filt.querySelectorAll('button').forEach(function (x) { x.classList.toggle('on', x === b); }); renderProjects();
-    });
-  }
-  renderProjects();
-  /* photo lightbox for the drone gallery */
-  var lbx = document.createElement('div'); lbx.className = 'lbx'; lbx.hidden = true; lbx.innerHTML = '<img alt="">';
-  document.body.appendChild(lbx);
-  function closeLbx() { lbx.hidden = true; }
-  lbx.addEventListener('click', closeLbx);
-  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeLbx(); });
-  grid.addEventListener('click', function (e) {
-    var a = e.target.closest('.proj__g'); if (!a) return; e.preventDefault();
-    var im = a.querySelector('img'); lbx.firstChild.src = im.src; lbx.firstChild.alt = im.alt; lbx.hidden = false;
-  });
-  $('#proj-note').innerHTML = 'More work on <a class="grad" href="' + esc(D.links.github) + '" target="_blank" rel="noopener">GitHub</a> and the <a class="grad" href="' + esc(D.links.site) + '" target="_blank" rel="noopener">project page</a>.';
-
-  /* experience */
-  $('#timeline').innerHTML = D.experience.map(function (e) {
-    return '<div class="tl reveal' + (e.current ? ' cur' : '') + '"><article class="card"><p class="card__org">' + esc(e.role) + (e.current ? '<span class="pill">CURRENT</span>' : '') + '</p>' + (e.period ? '<p class="when">' + esc(e.period) + (e.type ? ' · ' + esc(e.type) : '') + (e.location ? ' · ' + esc(e.location) : '') + '</p>' : '') + '<h3>' +
-      (e.url ? '<a href="' + esc(e.url) + '" target="_blank" rel="noopener">' + esc(e.company) + '</a>' : esc(e.company)) + '</h3><p>' + esc(e.description) + '</p>' + tags(e.tech) + '</article></div>';
-  }).join('');
-
-  /* credentials & workshops */
-  $('#cred-grid').innerHTML = D.credentials.map(function (c) {
-    return card('<p class="card__org">' + esc(c.issuer || 'Certificate') + '</p><h3>' + esc(c.title) + '</h3>' +
-      (c.url ? '<a class="lnk" href="' + esc(c.url) + '" target="_blank" rel="noopener">View credential →</a>' : ''));
-  }).join('');
-  $('#workshops').innerHTML = D.workshops.map(function (w) {
-    return card((w.org ? '<p class="card__org">' + esc(w.org) + '</p>' : '') + '<h3>' + esc(w.title) + '</h3><p>' + esc(w.text) + '</p>');
-  }).join('');
-
-  /* metrics: computed from the data above, never hard-coded */
-  var tools = D.skills.reduce(function (n, g) { return n + g.items.length; }, 0);
-  var metrics = [
-    [D.experience.length, 'Roles held'],
-    [D.credentials.length, 'Certifications'],
-    [tools, 'Tools & technologies'],
-    [D.workshops.length, 'Workshops attended'],
-    [D.projects.length, 'Projects built']
-  ];
-  $('#stats').innerHTML = metrics.map(function (m) { return '<div class="stat reveal"><b data-n="' + m[0] + '">0</b><span>' + m[1] + '</span></div>'; }).join('');
-
-  /* terminal (decorative) */
-  var lines = ['<span class="dim">$</span> init ai-lab --visual-only', '<span class="ok">✔</span> data pipeline ........ ready', '<span class="ok">✔</span> model training ........ ready', '<span class="ok">✔</span> deployment ............ ready', '<span class="ok">✔</span> monitoring ............ ready', '<span class="dim">$</span> status: <span class="ok">READY</span>'];
-  var out = $('#term-out'), started = false;
-  function runTerm() {
-    if (started) return; started = true; var i = 0;
-    (function step() { if (i >= lines.length) return; out.innerHTML += lines[i++] + '\n'; setTimeout(step, matchMedia('(prefers-reduced-motion: reduce)').matches ? 0 : 420); })();
-  }
-
-  /* nav */
-  var nav = $('#nav'), burger = $('#burger');
-  function onScroll() { nav.classList.toggle('solid', window.scrollY > 30); }
-  onScroll(); window.addEventListener('scroll', onScroll, { passive: true });
-  burger.addEventListener('click', function () { var o = nav.classList.toggle('open'); burger.setAttribute('aria-expanded', o); burger.setAttribute('aria-label', o ? 'Close menu' : 'Open menu'); });
-  document.querySelectorAll('#menu a').forEach(function (a) { a.addEventListener('click', function () { nav.classList.remove('open'); burger.setAttribute('aria-expanded', 'false'); }); });
-
-  /* reveal, counters, active link */
-  var links = [].slice.call(document.querySelectorAll('#menu a'));
-  var secs = links.map(function (a) { return document.querySelector(a.getAttribute('href')); });
-  function count(el) {
-    var n = +el.dataset.n, t0 = performance.now();
-    if (matchMedia('(prefers-reduced-motion: reduce)').matches) { el.textContent = n; return; }
-    (function f(t) { var p = Math.min((t - t0) / 1100, 1); el.textContent = Math.round(n * (1 - Math.pow(1 - p, 3))); if (p < 1) requestAnimationFrame(f); })(t0);
-  }
-  if ('IntersectionObserver' in window) {
-    var io = new IntersectionObserver(function (es) {
-      es.forEach(function (e) {
-        if (!e.isIntersecting) return; e.target.classList.add('in');
-        var c = e.target.querySelector('[data-n]'); if (c) count(c);
-        if (e.target.id === 'term') runTerm();
-        io.unobserve(e.target);
-      });
-    }, { threshold: .12 });
-    document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
-    secs.forEach(function (sec, i) {
-      if (!sec) return;
-      new IntersectionObserver(function (es) {
-        if (es[0].isIntersecting) links.forEach(function (a, j) { a.classList.toggle('on', j === i); });
-      }, { rootMargin: '-45% 0px -50% 0px' }).observe(sec);
-    });
-  } else {
-    document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('in'); });
-    document.querySelectorAll('[data-n]').forEach(function (c) { c.textContent = c.dataset.n; }); runTerm();
-  }
-
-  /* card tilt (desktop pointer only) */
-  function initTilt() {
-    if (!matchMedia('(hover:hover) and (pointer:fine)').matches || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-    document.querySelectorAll('.card:not(.tilt)').forEach(function (c) {
-      c.classList.add('tilt');
-      c.addEventListener('pointermove', function (e) {
-        var r = c.getBoundingClientRect(), x = (e.clientX - r.left) / r.width - .5, y = (e.clientY - r.top) / r.height - .5;
-        c.style.transform = 'perspective(900px) rotateX(' + (-y * 5) + 'deg) rotateY(' + (x * 6) + 'deg) translateY(-3px)';
-      });
-      c.addEventListener('pointerleave', function () { c.style.transform = ''; });
-    });
-  }
-  initTilt();
-})();
-
-</script>
+<script src="assets/js/extra-data.js"></script>
+<script src="assets/js/portfolio.js"></script>
 </body>
 </html>

@@ -1,0 +1,94 @@
+/* ============================================================
+   THEME — "Neon HUD" upgrade, shared by both pages.
+   Loaded AFTER each page's own <style>, so it only overrides.
+   Palette: deep navy base, electric blue + violet + magenta glow.
+   ============================================================ */
+:root{
+  --bg:#04061a;--bg2:#080d27;--card:#0c1236;--card2:#121a48;
+  --line:rgba(140,160,255,.18);--tx:#eef2ff;--mut:#9aa8cc;
+  --m1:#ff3d9a;--m2:#ff7ac6;--v1:#7a5cff;
+  /* fills that carry WHITE text */
+  --grad:linear-gradient(100deg,#0a6cff 0%,#7a3cff 56%,#d62f8a 100%);
+  /* gradient used as TEXT colour */
+  --grad-t:linear-gradient(100deg,#38e1ff 0%,#8f86ff 52%,#ff5db1 100%);
+  --glow-v:0 0 0 1px rgba(122,92,255,.28),0 18px 60px rgba(122,60,255,.22);
+}
+::selection{background:rgba(255,61,154,.35);color:#fff}
+
+/* ---- gradient text ---- */
+.grad,.stat b,.met b,.stats b{background:var(--grad-t);-webkit-background-clip:text;background-clip:text;color:transparent}
+
+/* ---- logo / buttons / badges: white text on the richer gradient ---- */
+.logo__mark{color:#fff;box-shadow:0 0 22px rgba(122,60,255,.55)}
+.btn{color:#fff;box-shadow:0 8px 28px rgba(122,60,255,.32),inset 0 1px 0 rgba(255,255,255,.28)}
+.btn:hover{box-shadow:0 12px 38px rgba(214,47,138,.42),inset 0 1px 0 rgba(255,255,255,.3);filter:brightness(1.08)}
+.btn--ghost{color:var(--tx);background:rgba(255,255,255,.04);box-shadow:none}
+.btn--ghost:hover{border-color:var(--m1);box-shadow:0 10px 34px rgba(255,61,154,.16);filter:none}
+.badge,.proj__dtag,.card .k{color:#fff;background:var(--grad)}
+.nav.solid{background:rgba(4,6,26,.74)}
+.nav__menu a.on::after{background:var(--grad-t)}
+.eyebrow::before{background:var(--grad-t)}
+.name .w.g>span{background:linear-gradient(180deg,#38e1ff 0%,#8f86ff 55%,#ff5db1 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+
+/* ---- cards: glass, glow border, HUD corners, cursor spotlight ---- */
+.card{background:linear-gradient(160deg,rgba(18,26,72,.74),rgba(8,13,39,.84));border-color:var(--line);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
+.card:hover{border-color:rgba(255,93,177,.5);box-shadow:var(--glow-v)}
+.card::before{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;z-index:-1;opacity:0;transition:opacity .35s;
+  background:radial-gradient(420px circle at var(--mx,50%) var(--my,50%),rgba(122,92,255,.20),transparent 46%)}
+.card:hover::before{opacity:1}
+.card::after{content:"";position:absolute;inset:-1px;border-radius:inherit;pointer-events:none;opacity:0;transition:opacity .35s;
+  background:
+    linear-gradient(var(--m1),var(--m1)) top left/16px 2px no-repeat,
+    linear-gradient(var(--m1),var(--m1)) top left/2px 16px no-repeat,
+    linear-gradient(#38e1ff,#38e1ff) bottom right/16px 2px no-repeat,
+    linear-gradient(#38e1ff,#38e1ff) bottom right/2px 16px no-repeat}
+.card:hover::after{opacity:1}
+.card__org,.label,.eyebrow,.tagline,.hero__tag{color:#6fe6ff}
+.ico{background:linear-gradient(135deg,rgba(10,108,255,.22),rgba(214,47,138,.18));border-color:rgba(143,134,255,.45);color:#dfe6ff}
+.tag{background:rgba(143,134,255,.07);border-color:rgba(143,134,255,.22);transition:border-color .2s,color .2s}
+.tag:hover{border-color:var(--m1);color:#fff}
+.lnk,.card a.lnk{color:#6fe6ff}
+
+/* ---- section labels: HUD tick ---- */
+.label{display:flex;align-items:center;gap:.9rem}
+.label::after{content:"";flex:0 1 90px;height:1px;background:linear-gradient(90deg,var(--m1),transparent)}
+.sec--alt{background:linear-gradient(180deg,rgba(12,18,54,.55),rgba(4,6,26,0))}
+.sec h2{text-wrap:balance}
+
+/* ---- stats ---- */
+.stat{position:relative;background:linear-gradient(180deg,rgba(18,26,72,.7),rgba(8,13,39,.8));overflow:hidden}
+.stat::before{content:"";position:absolute;left:0;right:0;top:0;height:2px;background:var(--grad-t);opacity:.8}
+
+/* ---- filters / chips ---- */
+.filters button.on,.filters button:hover{border-color:var(--m1);background:rgba(255,61,154,.10);color:#fff}
+.fact{background:linear-gradient(180deg,rgba(18,26,72,.7),rgba(8,13,39,.8))}
+.avatar{box-shadow:0 0 0 1px rgba(143,134,255,.35),0 24px 70px rgba(122,60,255,.28)}
+.chip{box-shadow:0 10px 40px rgba(122,60,255,.25)}
+.timeline::before{background:linear-gradient(#38e1ff,#7a3cff,var(--m1),transparent)}
+.tl::before{border-color:#8f86ff;box-shadow:0 0 0 4px rgba(143,134,255,.16)}
+.tl.cur::before{background:var(--m1);border-color:var(--m1)}
+.arch li{background:linear-gradient(180deg,rgba(18,26,72,.7),rgba(8,13,39,.8))}
+.arch li:hover{border-color:var(--m1)}
+.arch li:not(:last-child)::after{background:var(--grad-t)}
+.term{background:#050820;box-shadow:var(--glow-v)}
+.contact{background:radial-gradient(60% 80% at 80% 100%,rgba(122,60,255,.28),transparent 70%),radial-gradient(40% 60% at 10% 100%,rgba(255,61,154,.10),transparent 70%)}
+.footer{background:rgba(4,6,26,.85)}
+.loader i span{background:var(--grad-t)}
+
+/* ---- main page only: aurora + dot grid + scroll progress ---- */
+body.pf::before{content:"";position:fixed;inset:0;z-index:-2;pointer-events:none;background:
+  radial-gradient(52% 40% at 88% 6%,rgba(255,61,154,.15),transparent 70%),
+  radial-gradient(46% 46% at 6% 34%,rgba(10,108,255,.17),transparent 70%),
+  radial-gradient(54% 42% at 72% 96%,rgba(122,92,255,.16),transparent 70%)}
+body.pf::after{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.55;
+  background-image:radial-gradient(rgba(160,176,255,.13) 1px,transparent 1.4px);background-size:30px 30px;
+  -webkit-mask-image:radial-gradient(80% 70% at 50% 40%,#000 30%,transparent 100%);mask-image:radial-gradient(80% 70% at 50% 40%,#000 30%,transparent 100%)}
+.progress{position:fixed;top:0;left:0;right:0;height:2px;z-index:70;transform-origin:0 50%;transform:scaleX(var(--p,0));background:var(--grad-t);pointer-events:none}
+
+/* ---- front page: small extras ---- */
+.card .lk{display:inline-block;margin-top:.9rem;margin-right:1rem;color:#6fe6ff;font-size:.88rem;font-weight:500}
+.card .lk:hover{color:#fff}
+.card .lk::after{content:" →"}
+.card .k.new{background:linear-gradient(100deg,#d62f8a,#ff7ac6)}
+
+@media(prefers-reduced-motion:reduce){.card::before,.card::after{transition:none}}
